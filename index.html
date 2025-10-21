@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=alternate_email" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Mon portefolio</title>
+</head>
+
+<body>
+    <header>
+            <div class="boxed">
+                <div class="flex aligncenter space-between">
+                    <button onclick="openMenu()" class="header-menu-mobile">
+                        <span class="material-icons">menu</span>
+                    </button>           
+                        <ul class="header-menu">
+                            <li><a href="#Accueil">Accueil</a></li>
+                            <li><a href="#apropos">A propos</a></li>
+                            <li><a href="#competences">Mes compétences</a></li>
+                            <li><a href="#realisations">Mes réalisation</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#questions">Questions</a></li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="slider">
+    <img src="image/5230868.jpg" class="slider-background">
+    <div class="slider-content" id="Accueil">
+        <div class="contenant-photo">
+            <img src="image/mwa.JPG" class="photo-profil-irrégulière">
+        </div>
+        <h1>Foudil-Bey Nouri</h1>
+        <h3>Développeur Informatique</h3>                   
+    </div>        
+</div>
+
+    <div class="section">
+        <div class="boxed" id="apropos">
+            <div class="flex toColumn mCenter">
+                <div class="w40">
+                    <h2>A mon propos</h2>
+                </div>
+                <div class="w60">
+                    <p style="font-family: 'Arial', sans-serif;">   Actuellement étudiant au sein d’EPITECH, je suis à la recherche d’une alternance de 33 mois (à partir de janvier 2026) dans le domaine du développement.
+                        De nature curieuse, j’aime apprendre et je m'intègre aisément dans un collectif
+                        Mon parcours et mes divers emplois démontrent ma faculté d’adaptation.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="section dark">
+        <div class="boxed text-center" id="competences">           
+            <h1>Mes compétences</h1>
+                <div class="flex gap20">
+                    <div class="w33 skill">
+                        <img src="image/icons8-python-144.png" class="skill img">
+                        <h3>Python</h3>
+                    </div>
+                    <div class="w33 skill">
+                        <img src="image/icons8-html-5-144.png" class="skill img">
+                        <h3>html</h3>
+                    </div>
+                    <div class="w33 skill">
+                        <img src="image/icons8-logo-css-144.png" class="skill img">
+                        <h3>css</h3>
+                    </div>
+    
+                </div>
+            </div>
+           
+        </div>        
+                
+    </div>
+    <div class="section">
+        <div class="box text-center" id="realisations">
+            <h2>Mes réalisations</h2>
+                <div class="flex space-between">
+                    <div class="w32 réalisation">
+                        <a href="">
+                        <img src="image/comedy-wildlife-awards-squirel-stop.adapt_.1190.1.jpg">
+                        <h3>Soon...</h3>
+                        </a>
+                    </div>
+                    <div class="w32 réalisation">
+                        <a href="https://github.com/Augustin734/Projet-1">
+                        <img src="image/ballon-beach-volley_page.jpg">
+                        <h3>Projet-Site</h3>
+                        </a>
+                    </div>
+                    <div class="w32 réalisation">
+                        <a href="https://github.com/nouri3406/Pendu/blob/main/Pendu.py" target="_blank">
+                        <img src="image/tarot-cards-magic-divination-the-hanged-man-1750897661.jpg">
+                        <H3>Pendu</H3>
+                        </a>
+                    </div>
+                </div>
+
+
+        </div>
+    </div> 
+    <div class="section dark">
+        <div class="boxed text-center" id="contact">           
+            <h1>Coordonées</h1> 
+            <div class="flex toColumn space-between">
+                <div class="w25 contact">
+                    <span class="material-symbols-outlined icon">alternate_email</span>
+                    <span class="label">E.mail :</span>
+                    <a href="mailto:nouri.foudil-bey@epitech.eu" class="value">
+                        nouri.foudil-bey@epitech.eu </a>
+                </div>
+                <div class="w25 wm100 contact">
+                    <span class="value">Téléphone</span>
+                    <a href="tel:0766990269" class="value">07 66 99 02 69</a>
+                </div>
+                <div class="w25 wm100 contact">
+                    <span class="label">Liens</span>
+                    <span class="label">GITHUB</span>
+                    <a href="https://github.com/Nouri3406" target="_blank" rel="noopener noreferrer" class="value">Nouri3406</a>
+                </div>
+                <div class="w25 wm100 contact">
+                    <span class="label">Curriculum Vitae</span>
+                    <a href="https://github.com/Nouri3406" target="_blank" rel="noopener noreferrer" class="value">Nouri3406</a>
+                </div>
+            </div> 
+        </div>
+    </div>   
+    <div class="section">
+        <div class="boxed">
+            <div class="w40 flex toColumn mCenter " id="questions">
+                <h2>Vos questions ?</h2>
+                <div class="w60">
+                    <form action="/ma-page-de-traitement" method="post">
+                        <ul>
+                          <li>
+                            <label for="name">Nom&nbsp;:</label>
+                            <input type="text" id="name" name="user_name" required/>
+                          </li>
+                          <li>
+                            <label for="first.name">Prenom&nbsp;:</label>
+                            <input type="text" id="first.name" name="user_first.name" required/>
+                          </li>
+                          <li>
+                            <label for="mail">E-mail&nbsp;:</label>
+                            <input type="email" id="mail" name="user_mail" required/>
+                          </li>
+                          <li>
+                            <label for="tel">téléphone&nbsp;:</label>
+                            <input type="text" id="tel" name="user_tel" minlength="10" maxlength="10" required/>
+                          </li>
+                            <label for="date">Date :</label>
+                            <input type="date" id="date" name="date" value="2025-09-24" required>
+                          <li>
+                          <label for="question">Question :</label><br>
+                          <textarea id="question" name="question" rows="6" cols="50" required></textarea>
+                          </li>
+                        </ul>
+                        <input type="submit" value="Send" />
+            
+                      </form>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+<script src="js.js"></script>
+
+</html>
