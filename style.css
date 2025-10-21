@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Lovers+Quarrel&display=swap');
+@media(max-width:812px){
+    .header-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #000000;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    
+    }
+
+    .header-menu.active {
+        display: flex;
+    }
+
+    .header-menu-mobile {
+        display: block;
+        background: rgb(45, 207, 210);
+        border: 0;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: url('https://img.icons8.com/?size=100&id=rYvBn0oGmElk&format=png&color=000000') 10 10, auto !important;
+        z-index: 0;
+    }
+
+   
+    .slider{
+        height: 60vh;
+    }
+    .slider-content{
+        width: 90%;
+    }
+    .slider-content p{
+        margin-top: 20px;
+        font-size: 1.5rem;
+        text-wrap: balance;
+    }
+    h1{
+        font-size: 2rem;
+        text-align:center;
+        
+    }
+    h2{
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    p{
+        font-size: 1rem;
+        text-wrap: balance;
+    }
+    .toColumn{
+        flex-direction: column;
+    }
+    .mCenter{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+    .wm100{
+        width: 100% !important;
+    }
+    .section{
+        padding: 50px 0;
+    }
+    .boxed{
+        max-width: 90%;
+    }
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: black no-repeat center center;
+    background-size: cover;
+    z-index: 1000;
+    box-shadow:2px 2px 25px #3a3d3d;
+
+}
+
+.aligncenter{
+    align-items: center; 
+}
+
+.header-menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.header-menu.active {
+    display: flex;
+}
+
+.header-menu li a{
+    text-decoration: none;
+    color: #4aebf3 ;
+    padding: 30px;
+    display: block;
+    box-sizing: border-box;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.header-menu li a:hover{
+    transform: scale(1.5);
+}
+body{
+    font-family: "Lovers Quarrel", cursive;
+}
+
+* {
+    cursor: url('https://img.icons8.com/?size=100&id=rYvBn0oGmElk&format=png&color=000000') 10 10, auto !important;
+ }
+
+.lovers-quarrel-regular {
+    font-family: "Lovers Quarrel", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.slider{
+    width: 100%;
+    min-height: 80vh;
+    aspect-ratio: 16/9;
+    position: relative;
+ 
+}
+
+.slider-background{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(65%);
+}
+
+.slider-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;               /* centre horizontalement */
+    transform: translate(-50%, -50%); /* ajuste pour centrer parfaitement */
+    width: 100%;             /* ou 50% si tu veux limiter la largeur */
+    text-align: center; 
+    
+}
+
+/* Conteneur de l'image pour simuler la bordure */
+.contenant-photo {
+    width: 210px;
+    height: 210px;
+    padding: 5px;
+    background-color: #3f51b5; /* Couleur de la bordure */
+    border-radius: 40% 60% 70% 30% / 50% 30% 60% 40%;
+    display: inline-block; /* Permet de centrer ou aligner facilement */
+}
+
+/* Image de profil avec forme irrégulière */
+.photo-profil-irrégulière {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 40% 60% 70% 30% / 50% 30% 60% 40%;
+}
+
+/* Optionnel : effet au survol */
+.photo-profil-irrégulière:hover {
+    border-radius: 50% 50% 60% 40% / 40% 50% 50% 60%;
+    transition: border-radius 0.5s ease;
+}
+
+
+
+
+h1{
+    color: #4aebf3;
+    font-size: 3rem;
+    text-align: center;
+    justify-content: center;
+    align-items:center ;
+    } 
+
+h2{
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+   }
+
+h3{
+    color: #4aebf3;
+    font-size: 3rem;
+} 
+
+p{
+    font-size: 1.5rem;
+    line-height: 1.5em;
+}
+
+
+.dark{
+    background: #000;
+    color: #4aebf3;
+}
+.boxed{
+    max-width: 768px;
+    margin-inline: auto;
+}
+
+/* Conteneur de la section contact uniquement */
+.boxed > #questions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 80vh; /* hauteur suffisante pour centrer le contenu */
+    background-image: url('image/dame_bleu.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: 100%;
+}
+
+
+.flex{
+    display: flex;
+}
+
+.w40{
+    width: 40%;
+}
+
+.w60{
+    width: 60%;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.w33{
+    width: 33%;
+}
+
+.w32{
+    width: 32%;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+
+.gap20{
+    gap: 20px;
+}
+.skill{
+    text-align: center;
+    flex: 1 1 30%;
+    background-color: #3a3d3d;
+    border-radius: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    min-width: 150 px;
+
+}
+
+.skill.img{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    display: block;
+    margin: 0;
+
+}
+
+.réalisation{
+    height: auto;
+    aspect-ratio: 1/1;
+    position: relative;
+
+}
+
+.réalisation h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.réalisation a{
+    
+    width: 100%;
+    height: 61%;
+    text-decoration: none;
+    color: #4aebf3;
+}
+
+.réalisation img{
+    max-width: 100%;  
+    height: 100%; 
+    object-fit: cover;    
+    filter: brightness(30%);
+    transition: 3S ease;
+}   
+
+.réalisation:hover img{
+    filter: brightness(90%);
+}
+.réalisation:hover h3{
+        opacity: 1;
+}
+
+.icon{
+    display: block;
+}
+.label{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+}
+.value{
+    display: block;
+    font-size: 2rem;
+    margin: 15px 0;
+}
+
+.contac {
+    border: 2px inset #4aebf3;   
+    border-radius: 15px;         
+    box-sizing: border-box;     
+    padding: 1rem;              
+  }
+.header-menu-mobile{
+    display: none;
+}
+
+
+
+
+
+
