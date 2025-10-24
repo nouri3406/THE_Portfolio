@@ -22,3 +22,4 @@
 1. Clonez le dépôt sur votre machine locale :
 
 git clone https://github.com/ton-utilisateur/The_Portfolio.git
+2 .Deployez sur https://nouri3406.github.io/THE_Portfolio/
