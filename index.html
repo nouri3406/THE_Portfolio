@@ -134,7 +134,9 @@
     </div>
     <div class="form-container">
       <h2>Vos questions ?</h2>
-      <form action="/ma-page-de-traitement" method="post" class="styled-form">
+      <form action="https://api.web3forms.com/submit" method="POST" class="styled-form">
+        <input type="hidden" name="access_key" value="7fd0a2a6-d13f-4e0b-adac-2f18b0f45f8a">
+        <input type="hidden" name="redirect" value="https://web3forms.com/success">
         <ul>
           <li><label for="name">Nom :</label><input type="text" id="name" name="user_name" required></li>
           <li><label for="first.name">Prénom :</label><input type="text" id="first.name" name="user_first.name" required></li>
