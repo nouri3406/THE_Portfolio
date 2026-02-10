@@ -1,54 +1,63 @@
-// carousel.js
-
-// Sélectionne le carousel et ses éléments
-const carousel = document.querySelector('.carousel');
-const items = document.querySelectorAll('.carousel-item');
+const items = Array.from(document.querySelectorAll(".carousel-item"));
 const total = items.length;
 let currentIndex = 0;
 
+const radius = 260;
+const step = 360 / total;
 
-// Fonction pour mettre à jour le carousel
-function updateCarousel() {
-  items.forEach((item, index) => {
-    item.classList.remove('active');
-    const offset = ((index - currentIndex + total) % total) - 2;
-    item.style.transform = `rotateY(${offset * 30}deg) translateZ(${Math.abs(offset) === 0 ? 200 : 100}px)`;
-    item.style.opacity = Math.abs(offset) === 0 ? 1 : 0.5;
-    if (offset === 0) item.classList.add('active');
+function resetCarouselInline() {
+  items.forEach((item) => {
+    item.style.transform = "";
+    item.style.opacity = "";
+    item.classList.remove("active");
   });
 }
 
-// Boutons suivant et précédent
-document.querySelector('.next-btn').addEventListener('click', () => {
+function updateCarousel() {
+  const isMobile = window.matchMedia("(max-width: 812px)").matches;
+  if (isMobile) {
+    resetCarouselInline();
+    return;
+  }
+
+  items.forEach((item, index) => {
+    const angle = (index - currentIndex) * step;
+    item.style.transform = `rotateY(${angle}deg) translateZ(${radius}px)`;
+
+    const normalized = Math.abs(((angle + 180) % 360) - 180);
+    const opacity = 1 - (normalized / 180) * 0.6;
+    item.style.opacity = String(Math.max(0.25, opacity));
+
+    item.classList.toggle("active", normalized < step / 2);
+  });
+}
+
+document.querySelector(".next-btn")?.addEventListener("click", () => {
   currentIndex = (currentIndex + 1) % total;
   updateCarousel();
 });
 
-document.querySelector('.prev-btn').addEventListener('click', () => {
+document.querySelector(".prev-btn")?.addEventListener("click", () => {
   currentIndex = (currentIndex - 1 + total) % total;
   updateCarousel();
 });
 
-// Initialisation du carousel
+window.addEventListener("resize", updateCarousel);
 updateCarousel();
 
-
+// burger menu
 const burger = document.querySelector(".header-menu-mobile");
 const menu = document.querySelector(".header-menu");
-const icon = burger.querySelector(".material-icons");
+const icon = burger?.querySelector(".material-icons");
 
-burger.addEventListener("click", () => {
+burger?.addEventListener("click", () => {
   menu.classList.toggle("active");
-
-  // Change l’icône
-  icon.textContent = menu.classList.contains("active") ? "close" : "menu";
+  if (icon) icon.textContent = menu.classList.contains("active") ? "close" : "menu";
 });
 
-// Fermer le menu si on clique sur un lien
-document.querySelectorAll(".header-menu li a").forEach(link => {
+document.querySelectorAll(".header-menu li a").forEach((link) => {
   link.addEventListener("click", () => {
     menu.classList.remove("active");
-    icon.textContent = "menu";
+    if (icon) icon.textContent = "menu";
   });
 });
-
